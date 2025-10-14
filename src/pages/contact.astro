@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Newsletter from '../components/Newsletter.astro';
 
 const webhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL;
 ---
@@ -107,6 +108,9 @@ const webhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL;
         </form>
       </div>
     </div>
+
+    <!-- Newsletter Section -->
+    <Newsletter />
 
     <Footer />
   </div>

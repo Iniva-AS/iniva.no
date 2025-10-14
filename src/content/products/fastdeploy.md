@@ -1,8 +1,6 @@
 ---
-title: "FastDeploy"
-description: "Deploy your applications in seconds, not hours. A simple, fast deployment platform that just works. No complex configurations, no vendor lock-in, just pure speed."
-url: "https://example.com/fastdeploy"
-image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&h=800&fit=crop"
+title: "Quick3 for WooCommerce"
+description: "We built a WordPress plugin to integrate WooCommerce with Quick3 ERP. This gives customers the option to have their own e-commerce site that they have full control over, while still using their ERP system."
+url: "https://quick3-for-woocommerce.no/en/"
+image: "/products/quick3-for-woocommerce.png"
 ---
-
-FastDeploy is our take on modern deployment. We've stripped away all the unnecessary complexity and focused on what matters: getting your code live quickly and reliably.
