@@ -9,15 +9,15 @@ const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<BaseLayout title="Blog" description="Learn how we build great products and our thoughts on software development.">
+<BaseLayout title="Blogg" description="Lær hvordan vi bygger gode produkter og våre tanker om programvareutvikling.">
   <div class="bg-white">
     <Header />
 
     <div class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
-          <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">From the blog</h2>
-          <p class="mt-2 text-lg/8 text-gray-600">Learn how we build great products and our thoughts on software development.</p>
+          <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Fra bloggen</h2>
+          <p class="mt-2 text-lg/8 text-gray-600">Lær hvordan vi bygger gode produkter og våre tanker om programvareutvikling.</p>
           <div class="mt-16 space-y-20 lg:mt-20">
             {sortedPosts.map((post) => (
               <article class="relative isolate flex flex-col gap-8 lg:flex-row">
@@ -32,7 +32,7 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
                 <div>
                   <div class="flex items-center gap-x-4 text-xs">
                     <time datetime={post.data.date.toISOString()} class="text-gray-500">
-                      {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      {post.data.date.toLocaleDateString('nb-NO', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </time>
                     <a
                       href={post.data.category.href}

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const updatedAt = new Date().toISOString().split('T')[0];
+---
+
+<BaseLayout
+  title="Personvernerklæring"
+  description="Les hvordan Iniva håndterer personopplysninger i tråd med GDPR-kravene."
+>
+  <div class="bg-white">
+    <Header />
+
+    <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Personvernerklæring</h2>
+        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Sist oppdatert {updatedAt}. Denne erklæringen forklarer hvordan Iniva AS samler inn, bruker og beskytter personopplysninger i samsvar med personvernforordningen (GDPR).</p>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-3xl px-6 pb-24 sm:px-8">
+
+      <section class="mt-12 space-y-6 text-base text-gray-600">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-900">Data vi samler inn</h2>
+          <p class="mt-2">
+            Vi behandler kun informasjon du oppgir frivillig: kontaktdetaljer og din melding
+            når du sender inn kontaktskjemaet, og din e-postadresse når du abonnerer på
+            nyhetsbrevet. Vi har ikke sporing som identifiserer enkeltpersoner, og vi samler aldri inn
+            sensitive kategorier av personopplysninger.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-gray-900">Formål og rettslig grunnlag</h2>
+          <p class="mt-2">
+            Kontaktdetaljer brukes til å svare på henvendelser og levere avtalte tjenester basert på
+            berettiget interesse. Nyhetsbrev-e-poster sendes kun med ditt samtykke, som du kan
+            trekke tilbake når som helst ved å melde deg av eller kontakte oss direkte.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-gray-900">Lagring, deling og sikkerhet</h2>
+          <p class="mt-2">
+            Data lagres i sikre europeiske skytjenester og deles ikke med tredjeparter
+            med mindre det er nødvendig for tjenesteleveransen, som e-postleverandører bundet av databehandleravtaler.
+            Vi beholder kontaktforespørsler i opptil 12 måneder etter siste interaksjon
+            og nyhetsbrevdata til du melder deg av.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-gray-900">Dine rettigheter</h2>
+          <p class="mt-2">
+            Du kan be om innsyn, retting, sletting, begrensning eller dataportabilitet. Vi
+            svarer innen 30 dager. Dersom du mener vi behandler personopplysninger ulovlig, kan du
+            klage til Datatilsynet.
+          </p>
+        </div>
+      </section>
+
+      <section class="mt-12 border-t border-gray-200 pt-8 text-base text-gray-600">
+        <h2 class="text-xl font-semibold text-gray-900">Kontakt</h2>
+        <p class="mt-2">
+          Iniva AS, Vestfold, Norge. Personvernhenvendelser kan sendes til
+          <a href="mailto:hello@iniva.no" class="font-semibold text-indigo-600 hover:text-indigo-500">
+            hello@iniva.no
+          </a>.
+        </p>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

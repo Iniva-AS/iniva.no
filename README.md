@@ -1,43 +1,101 @@
-# Astro Starter Kit: Minimal
+# Iniva.no
 
-```sh
-npm create astro@latest -- --template minimal
-```
+The official website for Iniva - building precision tools for WooCommerce operators who demand more.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**Live site:** [https://iniva.no](https://iniva.no)
 
-## 🚀 Project Structure
+## About
 
-Inside of your Astro project, you'll see the following folders and files:
+Iniva is a product studio focused on shipping reliable, supported solutions for the WooCommerce ecosystem. This repository contains the source code for our company website, showcasing our products, sharing insights through our blog, and providing ways to connect with us.
+
+We believe in working in public and transparency, so we've made this repository open source to share our approach to building modern web experiences.
+
+## Tech Stack
+
+- **[Astro](https://astro.build)** - Static site generator with excellent performance
+- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
+- **TypeScript** - Type-safe JavaScript
+- **n8n Webhooks** - Form handling for contact and newsletter subscriptions
+
+## Project Structure
 
 ```text
 /
-├── public/
+├── public/              # Static assets (images, logos, testimonials)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/      # Reusable UI components
+│   ├── content/         # Content collections (blog posts, products)
+│   ├── layouts/         # Page layouts
+│   └── pages/           # Routes and pages
+│       ├── api/         # API endpoints (newsletter, contact)
+│       ├── blog/        # Blog pages
+│       └── ...
+├── docs/                # Internal strategy and planning docs
+└── astro.config.mjs     # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js 18+
+- npm or pnpm
 
-## 🧞 Commands
+### Installation
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/iniva.no.git
+cd iniva.no
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Install dependencies
+npm install
 
-## 👀 Want to learn more?
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your n8n webhook URLs
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Development
+
+```bash
+# Start the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+The development server will start at `http://localhost:4321`
+
+## Environment Variables
+
+To run the contact form and newsletter signup, you'll need to configure n8n webhooks:
+
+```env
+PUBLIC_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/contact
+N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/newsletter
+```
+
+## Contributing
+
+This is primarily our company website, but if you spot issues or have suggestions, feel free to open an issue or submit a pull request.
+
+For major changes, please open an issue first to discuss what you'd like to change.
+
+## License
+
+The code is open source for educational and transparency purposes. Please don't use the Iniva brand, logos, or content without permission.
+
+## Contact
+
+- Website: [iniva.no](https://iniva.no)
+- Email: hello@iniva.no
+- Products: [Quick3 for WooCommerce](https://quick3-for-woocommerce.no/en/)
+
+---
+
+Built with care by Ole Andreas Jørnsen Herland

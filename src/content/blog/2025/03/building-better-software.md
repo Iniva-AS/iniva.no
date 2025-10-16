@@ -1,6 +1,6 @@
 ---
-title: "Building Better Software"
-description: "Our approach to creating maintainable, scalable applications that stand the test of time."
+title: "Bygge bedre programvare"
+description: "Vår tilnærming til å skape vedlikeholdbare, skalerbare applikasjoner som tåler tidens tann."
 date: 2025-03-15
 image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop"
 author:
@@ -13,18 +13,18 @@ category:
   href: "#"
 ---
 
-At Iniva, we believe that great software is built on solid foundations. Our approach combines modern best practices with time-tested principles.
+Hos Iniva tror vi at god programvare bygges på solide fundamenter. Vår tilnærming kombinerer moderne beste praksis med tidstestede prinsipper.
 
-## Core Principles
+## Kjerneverdier
 
-We focus on three key areas when building software:
+Vi fokuserer på tre nøkkelområder når vi bygger programvare:
 
-- **Simplicity** - Choose the simplest solution that solves the problem
-- **Maintainability** - Write code that's easy to understand and modify
-- **Performance** - Optimize for real-world usage patterns
+- **Enkelhet** - Velg den enkleste løsningen som løser problemet
+- **Vedlikeholdbarhet** - Skriv kode som er lett å forstå og endre
+- **Ytelse** - Optimaliser for virkelige bruksmønstre
 
-## Modern Tools, Timeless Principles
+## Moderne verktøy, tidløse prinsipper
 
-While we embrace modern tools and frameworks, we never lose sight of fundamental software engineering principles. Clean architecture, solid testing practices, and thoughtful design always come first.
+Selv om vi omfavner moderne verktøy og rammeverk, mister vi aldri synet på grunnleggende programvareteknikk-prinsipper. Ren arkitektur, solid testpraksis og gjennomtenkt design kommer alltid først.
 
-The best code is code that doesn't need to exist. Before adding complexity, we always ask: is there a simpler way?
+Den beste koden er koden som ikke trenger å eksistere. Før vi legger til kompleksitet, spør vi alltid: finnes det en enklere måte?

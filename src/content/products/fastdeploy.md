@@ -1,6 +1,6 @@
 ---
 title: "Quick3 for WooCommerce"
-description: "We built a WordPress plugin to integrate WooCommerce with Quick3 ERP. This gives customers the option to have their own e-commerce site that they have full control over, while still using their ERP system."
+description: "Vi bygde en WordPress-plugin for å integrere WooCommerce med Quick3 ERP. Dette gir kundene muligheten til å ha sin egen nettbutikk som de har full kontroll over, samtidig som de fortsatt bruker sitt ERP-system."
 url: "https://quick3-for-woocommerce.no/en/"
 image: "/products/quick3-for-woocommerce.png"
 ---
