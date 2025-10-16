@@ -2,11 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Side ikke funnet', href: '/404', current: true }
+];
 ---
 
 <BaseLayout title="404 - Siden ikke funnet" description="Siden du leter etter eksisterer ikke.">
   <div class="bg-white">
     <Header />
+    <Breadcrumb items={breadcrumbs} />
 
     <div class="mx-auto max-w-7xl px-6 pt-32 pb-32 text-center sm:pt-40 sm:pb-40 lg:px-8">
       <p class="text-base/8 font-semibold text-indigo-600">404</p>
