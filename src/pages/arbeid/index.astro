@@ -3,15 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Newsletter from '../../components/Newsletter.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const entries = await getCollection('arbeid');
 const sortedEntries = entries.sort((a, b) => a.data.order - b.data.order);
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Arbeid', href: '/arbeid', current: true }
+];
 ---
 
 <BaseLayout title="Arbeid" description="Våre produkter, konsulentprosjekter og open source-bidrag.">
   <div class="bg-white">
     <Header />
+    <Breadcrumb items={breadcrumbs} />
 
     <div class="bg-white pt-32 pb-24 sm:pt-40 sm:pb-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
