@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Newsletter from '../../components/Newsletter.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
@@ -10,11 +11,17 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
 
 // Fetch all authors
 const allAuthors = await getCollection('authors');
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Blogg', href: '/blogg', current: true }
+];
 ---
 
 <BaseLayout title="Blogg" description="Lær hvordan vi bygger gode produkter og våre tanker om programvareutvikling.">
   <div class="bg-white">
     <Header />
+    <Breadcrumb items={breadcrumbs} />
 
     <div class="bg-white pt-32 pb-24 sm:pt-40 sm:pb-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
