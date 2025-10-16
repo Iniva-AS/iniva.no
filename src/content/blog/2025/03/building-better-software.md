@@ -3,11 +3,7 @@ title: "Bygge bedre programvare"
 description: "Vår tilnærming til å skape vedlikeholdbare, skalerbare applikasjoner som tåler tidens tann."
 date: 2025-03-15
 image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop"
-author:
-  name: "Ole Nordmann"
-  role: "Founder & CEO"
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop"
-  href: "#"
+author: "ole-herland"
 category:
   title: "Engineering"
   href: "#"

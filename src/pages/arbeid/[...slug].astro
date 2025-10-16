@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('arbeid');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Fetch all arbeid entries and filter for related entries
+const allArbeid = await getCollection('arbeid');
+const otherArbeid = allArbeid
+  .filter(e => e.slug !== entry.slug) // Exclude current entry
+  .sort((a, b) => a.data.order - b.data.order) // Sort by order
+  .slice(0, 3); // Limit to 3
+---
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={entry.data.image}
+>
+  <div class="bg-white">
+    <Header />
+
+    <div class="bg-white px-6 py-32 lg:px-8">
+      <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
+        <div class="flex items-center gap-x-2">
+          {entry.data.categories.map((category) => (
+            <span class="text-base/7 font-semibold text-indigo-600">{category}</span>
+          ))}
+        </div>
+        <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          {entry.data.title}
+        </h1>
+
+        <figure class="mt-10">
+          <img
+            alt=""
+            src={entry.data.image}
+            class="w-full h-auto rounded-2xl bg-gray-50"
+          />
+        </figure>
+
+        <div class="prose prose-gray mt-10 max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-indigo-600 prose-strong:text-gray-900 prose-ul:text-gray-600 prose-li:text-gray-600">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Work Section -->
+    {otherArbeid.length > 0 && (
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Annet arbeid</h2>
+          </div>
+          <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {otherArbeid.map((relatedEntry) => (
+              <article class="flex flex-col items-start justify-between">
+                <a href={`/arbeid/${relatedEntry.slug}`} class="relative aspect-video sm:aspect-[2/1] lg:aspect-square w-full">
+                  <img src={relatedEntry.data.image} alt="" class="absolute inset-0 size-full rounded-2xl bg-gray-100 object-cover" />
+                  <div class="absolute inset-0 rounded-2xl inset-ring inset-ring-gray-900/10"></div>
+                </a>
+                <div class="flex max-w-xl grow flex-col justify-between">
+                  <div class="mt-8 flex items-center gap-x-4 text-xs">
+                    {relatedEntry.data.categories.map((category) => (
+                      <span class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">{category}</span>
+                    ))}
+                  </div>
+                  <div class="group relative grow">
+                    <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                      <a href={`/arbeid/${relatedEntry.slug}`}>
+                        <span class="absolute inset-0"></span>
+                        {relatedEntry.data.title}
+                      </a>
+                    </h3>
+                    <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">{relatedEntry.data.description}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <Footer />
+  </div>
+</BaseLayout>

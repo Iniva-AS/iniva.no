@@ -3,11 +3,7 @@ title: "Lærdommer fra å lansere produkter"
 description: "Det vi har lært av å lansere flere produkter og feilene vi har gjort underveis."
 date: 2025-02-20
 image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop"
-author:
-  name: "Ole Nordmann"
-  role: "Founder & CEO"
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop"
-  href: "#"
+author: "ole-herland"
 category:
   title: "Produkt"
   href: "#"

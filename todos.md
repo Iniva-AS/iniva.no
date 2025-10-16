@@ -1,8 +1,6 @@
 - [ ] Homepage
-  - [ ] Image of me holding up laptop above my head, outside, in the intro!
-- [ ] Personvern
 - [ ] About subpage and menu item
-- [ ] Products [list]
+- [ ] Arbeid [list]
 - [ ] Blog [list]
 - [ ] Newsletter signup - n8n with Google sheets / Email to me with the signup
 - [ ] contact form - n8n with google sheets, slack and email.

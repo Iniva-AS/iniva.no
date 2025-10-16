@@ -3,11 +3,7 @@ title: "Hvorfor vi startet Iniva"
 description: "Historien bak Iniva og vårt oppdrag å bygge produkter som betyr noe."
 date: 2025-01-10
 image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop"
-author:
-  name: "Ole Nordmann"
-  role: "Founder & CEO"
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop"
-  href: "#"
+author: "ole-herland"
 category:
   title: "Company"
   href: "#"
