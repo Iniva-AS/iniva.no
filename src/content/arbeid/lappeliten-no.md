@@ -7,7 +7,7 @@ fingrene i. Vi jobber tett sammen med hovedfokus på deres tekniske løsninger.
 De gjør det veldig bra, og vi elsker å jobbe med dem.
 "
 image: "/arbeid/lappeliten.png"
-order: 2
+order: 3
 featured: true
 categories: ["Konsulentarbeid"]
 ---

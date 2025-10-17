@@ -4,9 +4,7 @@ description: "Det vi har lært av å lansere flere produkter og feilene vi har g
 date: 2025-02-20
 image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop"
 author: "ole-herland"
-category:
-  title: "Produkt"
-  href: "#"
+categories: ["Produkt"]
 ---
 
 Å lansere programvare er vanskelig. Å lansere *god* programvare er enda vanskeligere. Her er noen lærdommer vi har tatt med oss fra flere år med utvikling og lansering av produkter.

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import Newsletter from '../../components/Newsletter.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -38,7 +39,11 @@ const breadcrumbs = [
 
     <div class="bg-white px-6 py-32 lg:px-8">
       <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
-        <p class="text-base/7 font-semibold text-indigo-600">{post.data.category.title}</p>
+        <div class="flex items-center gap-x-2">
+          {post.data.categories.map((category) => (
+            <span class="text-base/7 font-semibold text-indigo-600">{category}</span>
+          ))}
+        </div>
         <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
           {post.data.title}
         </h1>
@@ -107,6 +112,8 @@ const breadcrumbs = [
         </div>
       </div>
     </div>
+
+    <Newsletter />
 
     <Footer />
   </div>

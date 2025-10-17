@@ -27,7 +27,7 @@ const breadcrumbs = [
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
           <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Fra bloggen</h2>
-          <p class="mt-2 text-lg/8 text-gray-600">Lær hvordan vi bygger gode produkter og våre tanker om programvareutvikling.</p>
+          <p class="mt-2 text-lg/8 text-gray-600">Vi skriver om forretningsdrift, produktskapning og filosofi</p>
           <div class="mt-16 space-y-20 lg:mt-20">
             {sortedPosts.map((post) => (
               <article class="relative isolate flex flex-col gap-8 lg:flex-row">
@@ -44,12 +44,9 @@ const breadcrumbs = [
                     <time datetime={post.data.date.toISOString()} class="text-gray-500">
                       {post.data.date.toLocaleDateString('nb-NO', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </time>
-                    <a
-                      href={post.data.category.href}
-                      class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                    >
-                      {post.data.category.title}
-                    </a>
+                    {post.data.categories.map((category) => (
+                      <span class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">{category}</span>
+                    ))}
                   </div>
                   <div class="group relative max-w-xl">
                     <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">

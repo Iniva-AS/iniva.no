@@ -4,9 +4,7 @@ description: "Vår tilnærming til å skape vedlikeholdbare, skalerbare applikas
 date: 2025-03-15
 image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop"
 author: "ole-herland"
-category:
-  title: "Engineering"
-  href: "#"
+categories: ["Engineering"]
 ---
 
 Hos Iniva tror vi at god programvare bygges på solide fundamenter. Vår tilnærming kombinerer moderne beste praksis med tidstestede prinsipper.

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Newsletter from '../components/Newsletter.astro';
 
 const updatedAt = new Date().toISOString().split('T')[0];
 
@@ -80,6 +81,7 @@ const breadcrumbs = [
       </section>
     </main>
 
+    <Newsletter />
     <Footer />
   </div>
 </BaseLayout>

@@ -8,7 +8,7 @@ Vi har bygget hele løsningen via Terminal Invest AS, og er spent på ferden vid
 for selskapet 🫶
 "
 image: "/arbeid/medbuddy.png"
-order: 3
+order: 4
 featured: true
 categories: ["Konsulentarbeid"]
 ---

@@ -1,20 +1,17 @@
-- [ ] Homepage
-- [ ] About subpage and menu item
-- [ ] Arbeid [list]
-- [ ] Blog [list]
+- [/] Homepage
+- [/] Blog [list]
+  - [ ] Write two/three posts.
 - [ ] Newsletter signup - n8n with Google sheets / Email to me with the signup
 - [ ] contact form - n8n with google sheets, slack and email.
+- [ ] Create redirects for all the old URLS. Download sitemap and make a redirect map with claude.
+- [ ] Setup ploi deployment
+- [ ] Setup cloudflare/ssl
+- [ ] Setup auto deploy on push
+
+- [ ] Email signature on iniva.no
+- [ ] Email signature on herland.me
 
 - [ ] Create the new pckasse-for-woocommerce.no site. Make a tmp site while I transform to a wp-native plugin
-
-## Work (combine product and client work)
-
-_Use tags_ - Iniva Product, Consulting, Open Source
-
-- Quick3 for WooCommerce
-- PCKasse for WooCommerce
-- Medbuddy
-- Lappeliten
 
 ## Marketing (after live)
 
@@ -40,6 +37,6 @@ _Use tags_ - Iniva Product, Consulting, Open Source
 
 ## Blog post
 
+- [x] En bedrift for tiårene som kommer
+- [x] 8-8-8. Sov, Job, Fritid
 - [ ] 100% fokus på teknisk 5% fokus på design (0% matte)
-- [ ] En bedrift for tiårene som kommer
-- [ ] 8-8-8. Sov, Job, Fritid

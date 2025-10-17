@@ -7,8 +7,8 @@ fra nærområdet til selskap i milliardklassen. Forholdet vårt er godt og Iniva
 digger å jobbe med gutta krutt fra Veniro!
 "
 image: "/arbeid/veniro-img.png"
-order: 4
-featured: true
+order: 5
+featured: false
 categories: ["Konsulentarbeid"]
 ---
 

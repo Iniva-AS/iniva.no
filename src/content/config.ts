@@ -25,10 +25,7 @@ const blog = defineCollection({
     date: z.date(),
     image: z.string(),
     author: z.string(),
-    category: z.object({
-      title: z.string(),
-      href: z.string(),
-    }),
+    categories: z.array(z.string()),
   }),
 });
 

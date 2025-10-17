@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Newsletter from '../components/Newsletter.astro';
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -36,6 +37,7 @@ const breadcrumbs = [
       </div>
     </div>
 
+    <Newsletter />
     <Footer />
   </div>
 </BaseLayout>

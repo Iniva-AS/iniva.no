@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import Newsletter from '../../components/Newsletter.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -101,6 +102,7 @@ const breadcrumbs = [
       </div>
     )}
 
+    <Newsletter />
     <Footer />
   </div>
 </BaseLayout>
