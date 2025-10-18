@@ -31,7 +31,7 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Get n8n webhook URL from environment
-    const webhookUrl = import.meta.env.NEWSLETTER_N8N_WEBHOOK_URL;
+    const webhookUrl = import.meta.env.PUBLIC_NEWSLETTER_N8N_WEBHOOK_URL;
 
     if (!webhookUrl) {
       console.error("N8N_WEBHOOK_URL is not configured");

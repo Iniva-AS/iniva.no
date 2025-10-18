@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import Newsletter from '../components/Newsletter.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
-const webhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL;
+const webhookUrl = import.meta.env.PUBLIC_KONTAKT_N8N_WEBHOOK_URL;
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -44,7 +44,7 @@ const breadcrumbs = [
             <dl class="mt-10 space-y-4 text-base/7 text-gray-600">
               <div class="flex gap-x-4">
                 <dt class="flex-none">
-                  <span class="sr-only">Email</span>
+                  <span class="sr-only">E-post</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="h-7 w-6 text-gray-400">
                     <path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
@@ -70,7 +70,7 @@ const breadcrumbs = [
                 </div>
               </div>
               <div class="sm:col-span-2">
-                <label for="email" class="block text-sm/6 font-semibold text-gray-900">Email</label>
+                <label for="email" class="block text-sm/6 font-semibold text-gray-900">E-post</label>
                 <div class="mt-2.5">
                   <input id="email" type="email" name="email" required autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
                 </div>
