@@ -1,4 +1,6 @@
-import type { APIRoute } from 'astro';
+import type { APIRoute } from "astro";
+
+export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -6,13 +8,13 @@ export const POST: APIRoute = async ({ request }) => {
     const { email } = body;
 
     // Validate email
-    if (!email || typeof email !== 'string') {
+    if (!email || typeof email !== "string") {
       return new Response(
         JSON.stringify({
           success: false,
-          message: 'Email address is required',
+          message: "Email address is required",
         }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
+        { status: 400, headers: { "Content-Type": "application/json" } },
       );
     }
 
@@ -22,61 +24,66 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(
         JSON.stringify({
           success: false,
-          message: 'Invalid email address',
+          message: "Invalid email address",
         }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
+        { status: 400, headers: { "Content-Type": "application/json" } },
       );
     }
 
     // Get n8n webhook URL from environment
-    const webhookUrl = import.meta.env.N8N_WEBHOOK_URL;
+    const webhookUrl = import.meta.env.NEWSLETTER_N8N_WEBHOOK_URL;
 
     if (!webhookUrl) {
-      console.error('N8N_WEBHOOK_URL is not configured');
+      console.error("N8N_WEBHOOK_URL is not configured");
       return new Response(
         JSON.stringify({
           success: false,
-          message: 'Newsletter service is not configured. Please try again later.',
+          message:
+            "Newsletter service is not configured. Please try again later.",
         }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
+        { status: 500, headers: { "Content-Type": "application/json" } },
       );
     }
 
     // Forward to n8n webhook
     const n8nResponse = await fetch(webhookUrl, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ email }),
     });
 
     if (!n8nResponse.ok) {
-      console.error('n8n webhook failed:', n8nResponse.status, n8nResponse.statusText);
+      console.error(
+        "n8n webhook failed:",
+        n8nResponse.status,
+        n8nResponse.statusText,
+      );
       return new Response(
         JSON.stringify({
           success: false,
-          message: 'Failed to subscribe. Please try again later.',
+          message: "Failed to subscribe. Please try again later.",
         }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
+        { status: 500, headers: { "Content-Type": "application/json" } },
       );
     }
 
     return new Response(
       JSON.stringify({
         success: true,
-        message: 'Successfully subscribed! Check your inbox for confirmation.',
+        message: "Successfully subscribed! Check your inbox for confirmation.",
       }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
+      { status: 200, headers: { "Content-Type": "application/json" } },
     );
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    console.error("Newsletter subscription error:", error);
     return new Response(
       JSON.stringify({
         success: false,
-        message: 'An unexpected error occurred. Please try again later.',
+        message: "An unexpected error occurred. Please try again later.",
       }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 };

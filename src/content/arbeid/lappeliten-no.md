@@ -24,6 +24,6 @@ med å forbedre arbeidsflyt, skrive tester, styrke koden og de tekniske komponen
 Det er veldig moro å jobbe med oppgaver der vi ser kontinuerlig og raskt effekten
 av det man implementerer.
 
-Med millioner av kunder og shipping til hele verden er det viktig å holde tungen
-rett i munn, og være nøye. Samtidig ønsker ikke kunden å bli stående stille, så
-vi prøver samtidig å sitte fremoverlent i stolen når vi jobber.
+Med millioner av kunder og shipping til hele verden er det viktig å være nøye og
+ha tungen rett i munn. Samtidig ønsker ikke kunden å bli stående stille, så vi
+prøver samtidig å sitte fremoverlent i stolen når vi jobber.

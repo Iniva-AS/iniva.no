@@ -1,14 +1,17 @@
 # Iniva.no
 
-The official website for Iniva - building precision tools for WooCommerce operators who demand more.
+The official website for [Iniva](https://iniva.no).
 
-**Live site:** [https://iniva.no](https://iniva.no)
+To be even more transparent we have decided to just make the source code of our
+website public. This gives the currious reader the possibility to look into how
+it's made. Life is just a bit more fun when you are open and transparent 🕺
 
 ## About
 
-Iniva is a product studio focused on shipping reliable, supported solutions for the WooCommerce ecosystem. This repository contains the source code for our company website, showcasing our products, sharing insights through our blog, and providing ways to connect with us.
-
-We believe in working in public and transparency, so we've made this repository open source to share our approach to building modern web experiences.
+Iniva is a small norwegian company working on building products with and for
+clients. We focus on niche prodcts that there is a proven need for in the market.
+For the time being the focus is WooCommerce related products, but there are
+other products in other niches in the pending list that we hope to get to soon!
 
 ## Tech Stack
 
@@ -77,7 +80,7 @@ To run the contact form and newsletter signup, you'll need to configure n8n webh
 
 ```env
 PUBLIC_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/contact
-N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/newsletter
+NEWSLETTER_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/newsletter
 ```
 
 ## Contributing
@@ -94,8 +97,7 @@ The code is open source for educational and transparency purposes. Please don't 
 
 - Website: [iniva.no](https://iniva.no)
 - Email: hello@iniva.no
-- Products: [Quick3 for WooCommerce](https://quick3-for-woocommerce.no/en/)
 
 ---
 
-Built with care by Ole Andreas Jørnsen Herland
+Built with care by Ole Herland

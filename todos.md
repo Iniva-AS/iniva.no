@@ -1,7 +1,5 @@
 - [/] Homepage
-- [/] Blog [list]
-  - [ ] Write two/three posts.
-- [ ] Newsletter signup - n8n with Google sheets / Email to me with the signup
+- [x] Newsletter signup - n8n with Google sheets / Email to me with the signup
 - [ ] contact form - n8n with google sheets, slack and email.
 - [ ] Create redirects for all the old URLS. Download sitemap and make a redirect map with claude.
 - [ ] Setup ploi deployment
@@ -39,4 +37,5 @@
 
 - [x] En bedrift for tiårene som kommer
 - [x] 8-8-8. Sov, Job, Fritid
-- [ ] 100% fokus på teknisk 5% fokus på design (0% matte)
+- [ ] Finne på noe om programmering? Claude Code, som er i vinden?
+  - [ ] Vibe Code og Vibe Engineering?

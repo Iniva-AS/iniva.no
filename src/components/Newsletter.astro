@@ -5,16 +5,16 @@
 <div class="bg-white py-16 sm:py-24">
   <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-      <h2 class="mx-auto max-w-3xl text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">Get notified when we're launching</h2>
-      <p class="mx-auto mt-6 max-w-lg text-center text-lg text-gray-300">Reprehenderit ad esse et non officia in nulla. Id proident tempor incididunt nostrud nulla et culpa.</p>
+      <h2 class="mx-auto max-w-3xl text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">Meld deg på vårt nyhetsbrev</h2>
+      <p class="mx-auto mt-6 max-w-lg text-center text-lg text-gray-300">Hold deg oppdatert med hva vi holder på med, og våre blogg innlegg</p>
       <form data-newsletter-form class="mx-auto mt-10 flex max-w-md gap-x-4">
-        <label for="email-address" class="sr-only">Email address</label>
+        <label for="email-address" class="sr-only">E-post</label>
         <input
           id="email-address"
           type="email"
           name="email"
           required
-          placeholder="Enter your email"
+          placeholder="Skriv inn din e-post"
           autocomplete="email"
           data-newsletter-input
           class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
@@ -24,7 +24,7 @@
           data-newsletter-button
           class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
-          Notify me
+          Meld på
         </button>
       </form>
       <div data-newsletter-message class="mx-auto mt-4 max-w-md text-center text-sm font-medium"></div>
@@ -94,8 +94,8 @@
   function showMessage(message: string, type: 'success' | 'error') {
     if (messageEl) {
       messageEl.textContent = message;
-      messageEl.className = `mt-4 text-sm font-medium ${
-        type === 'success' ? 'text-green-600' : 'text-red-600'
+      messageEl.className = `mx-auto mt-4 max-w-md text-center text-sm font-medium ${
+        type === 'success' ? 'text-green-300' : 'text-red-300'
       }`;
     }
   }
