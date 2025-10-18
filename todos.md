@@ -1,23 +1,7 @@
 - [x] Homepage
-- [ ] Create redirects for all the old URLS. Download sitemap and make a redirect map with claude.
-
-  **Redirect Map (Old URL → New URL):**
-  - `/integrasjoner/` → `/arbeid`
-  - `/integrasjoner/quick3-woocommerce/` → `/arbeid/quick3-for-woocommerce`
-  - `/integrasjoner/pckasse-woocommerce-integrasjon/` → `/arbeid/pckasse-for-woocommerce`
-  - `/artikler/` → `/blogg`
-  - `/personvernerklaering/` → `/personvern`
-  - `/` → `/` (no change)
-
-  **Implementation Options:**
-  1. Add to `astro.config.mjs` using Astro's built-in `redirects` object (client-side meta refresh)
-  2. Configure server-level 301 redirects in Ploi dashboard (better for SEO)
-  3. Use custom nginx/htaccess rules if Ploi supports it
-
 - [ ] Go though SEO, titles, keywords, etc
-- [ ] Setup ploi deployment
-- [ ] Setup cloudflare/ssl
-- [ ] Setup auto deploy on push
+- [/] Setup auto deploy on push
+- [ ] upadte sitemap for search
 
 - [ ] Email signature on iniva.no
 - [ ] Email signature on herland.me
