@@ -51,7 +51,7 @@ const breadcrumbs = [
 
         {author && (
           <div class="mt-6 flex items-center gap-x-4">
-            <img alt="" src={author.data.image} loading="lazy" class="size-12 rounded-full bg-gray-100" />
+            <Image src={author.data.image} alt={author.data.name} loading="lazy" class="size-12 rounded-full bg-gray-100" widths={[48, 96]} sizes="48px" />
             <div class="text-sm/6">
               <p class="font-semibold text-gray-900">{author.data.name}</p>
               <p class="text-gray-600">
