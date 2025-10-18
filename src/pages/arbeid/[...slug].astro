@@ -55,6 +55,7 @@ const breadcrumbs = [
           <img
             alt=""
             src={entry.data.image}
+            loading="lazy"
             class="w-full h-auto rounded-2xl bg-gray-50"
           />
         </figure>
@@ -76,7 +77,7 @@ const breadcrumbs = [
             {otherArbeid.map((relatedEntry) => (
               <article class="flex flex-col items-start justify-between">
                 <a href={`/arbeid/${relatedEntry.slug}`} class="relative aspect-video sm:aspect-[2/1] lg:aspect-square w-full">
-                  <img src={relatedEntry.data.image} alt="" class="absolute inset-0 size-full rounded-2xl bg-gray-100 object-cover" />
+                  <img src={relatedEntry.data.image} alt="" loading="lazy" class="absolute inset-0 size-full rounded-2xl bg-gray-100 object-cover" />
                   <div class="absolute inset-0 rounded-2xl inset-ring inset-ring-gray-900/10"></div>
                 </a>
                 <div class="flex max-w-xl grow flex-col justify-between">

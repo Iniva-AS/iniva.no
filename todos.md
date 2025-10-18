@@ -1,7 +1,5 @@
-- [x] Homepage
-- [ ] Go though SEO, titles, keywords, etc
-- [/] Setup auto deploy on push
-- [ ] upadte sitemap for search
+- [/] Go though SEO, titles, keywords, etc
+- [/] Fix OG default image
 
 - [ ] Email signature on iniva.no
 - [ ] Email signature on herland.me
