@@ -65,7 +65,17 @@
       messageEl.textContent = '';
 
       try {
-        const response = await fetch('/api/newsletter', {
+        // Get n8n webhook URL from environment
+        const webhookUrl = import.meta.env.PUBLIC_NEWSLETTER_N8N_WEBHOOK_URL;
+
+        if (!webhookUrl) {
+          showMessage('Nyhetsbrevtjenesten er ikke konfigurert. Vennligst prøv igjen senere.', 'error');
+          button.disabled = false;
+          button.textContent = originalButtonText;
+          return;
+        }
+
+        const response = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -73,13 +83,11 @@
           body: JSON.stringify({ email }),
         });
 
-        const data = await response.json();
-
         if (response.ok) {
-          showMessage(data.message || 'Meldingen din er registrert!', 'success');
+          showMessage('Du er nå påmeldt! Sjekk innboksen din for bekreftelse.', 'success');
           input.value = '';
         } else {
-          showMessage(data.message || 'Kunne ikke melde på. Vennligst prøv igjen.', 'error');
+          showMessage('Kunne ikke melde på. Vennligst prøv igjen.', 'error');
         }
       } catch (error) {
         showMessage('Nettverksfeil. Vennligst prøv igjen senere.', 'error');
