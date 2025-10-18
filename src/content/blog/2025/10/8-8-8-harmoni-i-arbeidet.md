@@ -6,7 +6,7 @@ vi det lange løp og vi er ikke villige til å ofre livet for en hit. Livet er a
 for verdifult til å selge billig.
 "
 date: 2025-10-16
-image: /blogg/2025/10/8-8-8.png
+image: ./8-8-8.png
 author: "ole-herland"
 categories: ["Visjon"]
 ---

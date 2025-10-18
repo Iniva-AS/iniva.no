@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import Newsletter from '../../components/Newsletter.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -100,11 +101,13 @@ const breadcrumbs = [
         )}
 
         <figure class="mt-10">
-          <img
-            alt=""
+          <Image
             src={post.data.image}
+            alt={post.data.title}
             loading="lazy"
             class="aspect-video w-full rounded-2xl bg-gray-50 object-cover"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 768px) 100vw, 896px"
           />
         </figure>
 

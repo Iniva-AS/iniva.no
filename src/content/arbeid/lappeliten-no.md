@@ -6,7 +6,7 @@ Med et høyt ordrevolum, salg i hele verden og høye ambisjoner har vi nok å he
 fingrene i. Vi jobber tett sammen med hovedfokus på deres tekniske løsninger. 
 De gjør det veldig bra, og vi elsker å jobbe med dem.
 "
-image: "/arbeid/lappeliten.png"
+image: ./lappeliten.png
 order: 3
 featured: true
 categories: ["Konsulentarbeid"]

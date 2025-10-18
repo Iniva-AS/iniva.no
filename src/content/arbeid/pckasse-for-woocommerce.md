@@ -6,7 +6,7 @@ Denne synkroniserer produkter, lager, kategorier, merker, ordre, kunder og mer
 helt automatisk. Dette gir kunder av PCKasse muligheten til å ha sin helt egen 
 nettbutikk som de har full kontroll over.
 "
-image: "/arbeid/pckasse-for-woocommerce.jpg"
+image: ./pckasse-for-woocommerce.jpg
 order: 1
 featured: true
 categories: ["Iniva produkt"]

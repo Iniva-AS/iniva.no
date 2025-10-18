@@ -1,7 +1,7 @@
 ---
 name: "Ole Herland"
 role: "Nerd og gründer"
-image: "/oleherland.jpg"
+image: ./oleherland.jpg
 socials:
   linkedin: "https://www.linkedin.com/in/oleherland/"
   github: "https://github.com/gogoro"

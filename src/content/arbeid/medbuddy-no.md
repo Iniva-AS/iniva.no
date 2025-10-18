@@ -7,7 +7,7 @@ er et system som skal hjelpe sykehus og helsepersonell få kontroll på engangsu
 Vi har bygget hele løsningen via Terminal Invest AS, og er spent på ferden videre 
 for selskapet 🫶
 "
-image: "/arbeid/medbuddy.png"
+image: ./medbuddy.png
 order: 4
 featured: true
 categories: ["Konsulentarbeid"]

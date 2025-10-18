@@ -1,8 +1,5 @@
 - [/] Go though SEO, titles, keywords, etc
-- [/] Fix OG default image
-
-- [ ] Email signature on iniva.no
-- [ ] Email signature on herland.me
+- [x] Fix OG default image
 
 - [ ] Create the new pckasse-for-woocommerce.no site. Make a tmp site while I transform to a wp-native plugin
 

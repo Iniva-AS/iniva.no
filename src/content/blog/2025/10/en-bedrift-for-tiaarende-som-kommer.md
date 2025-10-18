@@ -7,7 +7,7 @@ Den andre gruppen er de som ønsker å skape noe for seg selv og sine kunder. In
 er godt plassert i kategori nummer to. Vi jobber for nåtiden og fremtiden.
 "
 date: 2025-10-16
-image: /blogg/2025/10/bedrift-for-tiaarene-som-kommer.png
+image: ./bedrift-for-tiaarene-som-kommer.png
 author: "ole-herland"
 categories: ["Visjon"]
 ---

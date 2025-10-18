@@ -6,7 +6,7 @@ Her synkroniserer vi automatisk produkter, lager, ordre og kunder.
 Dette gir Quick3 kunder muligheten til å ta helt kontroll over sin nettbutikk 
 for å øke salg om omsetning.
 "
-image: "/products/quick3-for-woocommerce.png"
+image: ./quick3-for-woocommerce.png
 order: 1
 featured: true
 categories: ["Iniva produkt"]
