@@ -124,7 +124,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             title: 'Google Analytics',
             purposes: ['analytics'],
             required: false,
-            default: false,
+            default: true,
             onAccept: function() {
               gtag('consent', 'update', {
                 'analytics_storage': 'granted'
@@ -141,7 +141,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             title: 'Google Ads',
             purposes: ['marketing'],
             required: false,
-            default: false,
+            default: true,
             onAccept: function() {
               gtag('consent', 'update', {
                 'ad_storage': 'granted',
@@ -171,6 +171,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Klaro Cookie Consent -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7.18/dist/klaro.min.css" />
     <script defer data-config="klaroConfig" src="https://cdn.jsdelivr.net/npm/klaro@0.7.18/dist/klaro-no-css.min.js"></script>
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
