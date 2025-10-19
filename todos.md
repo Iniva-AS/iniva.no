@@ -1,5 +1,5 @@
 - [/] Go though SEO, titles, keywords, etc
-- [x] Fix OG default image
+- [/] Google Analytics, through GTM
 
 - [ ] Create the new pckasse-for-woocommerce.no site. Make a tmp site while I transform to a wp-native plugin
 
@@ -27,7 +27,5 @@
 
 ## Blog post
 
-- [x] En bedrift for tiårene som kommer
-- [x] 8-8-8. Sov, Job, Fritid
 - [ ] Finne på noe om programmering? Claude Code, som er i vinden?
   - [ ] Vibe Code og Vibe Engineering?

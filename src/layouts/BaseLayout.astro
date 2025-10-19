@@ -18,6 +18,35 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!doctype html>
 <html lang="no">
   <head>
+    <!-- Google Consent Mode v2 - Must load BEFORE GTM -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Set default consent states (denied until user consents)
+      gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'functionality_storage': 'granted',
+          'personalization_storage': 'denied',
+          'security_storage': 'granted',
+          'wait_for_update': 500
+      });
+
+      gtag('set', 'url_passthrough', true);
+      gtag('set', 'ads_data_redaction', true);
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TXR2FKP5');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -49,8 +78,105 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
     </script>
+
+    <!-- Klaro Cookie Consent Configuration -->
+    <script is:inline>
+      window.klaroConfig = {
+        version: 1,
+        lang: 'no',
+        mustConsent: true,
+        acceptAll: true,
+        cookieName: 'klaro',
+        cookieExpiresAfterDays: 365,
+
+        translations: {
+          no: {
+            consentModal: {
+              title: 'Informasjonskapsler',
+              description: 'Vi bruker informasjonskapsler for å forbedre din opplevelse på nettstedet vårt. Du kan velge hvilke kategorier du vil tillate.',
+            },
+            consentNotice: {
+              description: 'Vi bruker informasjonskapsler for å forbedre din opplevelse. Vil du tillate dette?',
+              learnMore: 'Les mer',
+            },
+            purposes: {
+              analytics: 'Analyse',
+              marketing: 'Markedsføring',
+              functional: 'Funksjonell',
+            },
+            purposeItem: {
+              service: 'tjeneste',
+              services: 'tjenester',
+            },
+            ok: 'Godta alle',
+            acceptAll: 'Godta alle',
+            acceptSelected: 'Godta valgte',
+            decline: 'Avslå',
+            save: 'Lagre',
+            close: 'Lukk',
+            poweredBy: 'Drevet av Klaro!',
+          },
+        },
+
+        services: [
+          {
+            name: 'google-analytics',
+            title: 'Google Analytics',
+            purposes: ['analytics'],
+            required: false,
+            default: false,
+            onAccept: function() {
+              gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+              });
+            },
+            onDecline: function() {
+              gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+              });
+            },
+          },
+          {
+            name: 'google-ads',
+            title: 'Google Ads',
+            purposes: ['marketing'],
+            required: false,
+            default: false,
+            onAccept: function() {
+              gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+              });
+            },
+            onDecline: function() {
+              gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+              });
+            },
+          },
+          {
+            name: 'plausible',
+            title: 'Plausible Analytics',
+            purposes: ['analytics'],
+            required: false,
+            default: true,
+          },
+        ],
+      };
+    </script>
+
+    <!-- Klaro Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7.18/dist/klaro.min.css" />
+    <script defer data-config="klaroConfig" src="https://cdn.jsdelivr.net/npm/klaro@0.7.18/dist/klaro-no-css.min.js"></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXR2FKP5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <slot />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   </body>
