@@ -83,15 +83,36 @@ PUBLIC_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/contact
 NEWSLETTER_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/newsletter
 ```
 
+## Copyright
+
+© 2025 Iniva AS. All Rights Reserved.
+
+This source code is publicly visible for transparency and portfolio purposes ONLY.
+
+**YOU MAY:** View and study the code
+
+**YOU MAY NOT:**
+- Copy, reproduce, or redistribute this code in any form
+- Modify, adapt, or create derivative works
+- Use this code or any portion of it in your own projects (personal or commercial)
+- Use this code as a template or boilerplate
+- Extract components, utilities, or logic for reuse
+- Use the Iniva brand, name, logos, or any visual assets
+- Claim this work as your own or remove copyright notices
+
+**This is NOT open source software.** This repository does not grant you any license to use, modify, or distribute the code.
+
+Any unauthorized use, reproduction, or distribution of this code may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.
+
+For licensing inquiries or permission requests, contact: hello@iniva.no
+
 ## Contributing
 
-This is primarily our company website, but if you spot issues or have suggestions, feel free to open an issue or submit a pull request.
+This is our company website. If you spot issues or have suggestions, you may open an issue.
 
-For major changes, please open an issue first to discuss what you'd like to change.
+**We do not accept pull requests for this repository** due to the copyright restrictions above.
 
-## License
-
-The code is open source for educational and transparency purposes. Please don't use the Iniva brand, logos, or content without permission.
+For questions or suggestions, please contact us at hello@iniva.no
 
 ## Contact
 
