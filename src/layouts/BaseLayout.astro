@@ -11,6 +11,9 @@ const {
   image = '/misc/og-image.png',
 } = Astro.props;
 
+// Extract src from Image object if needed (for content collections using image())
+const imageSrc = typeof image === 'string' ? image : image.src;
+
 const fullTitle = title === 'Iniva' ? title : `${title} | Iniva`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -63,14 +66,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={new URL(imageSrc, Astro.site)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    <meta property="twitter:image" content={new URL(imageSrc, Astro.site)} />
 
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-154HN9EeP_0vbZwF10MdV.js"></script>
